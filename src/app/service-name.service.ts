@@ -14,6 +14,8 @@ export class ServiceNameService {
     {id:6, name:"Sociology", year:2021, availability:false}
   ]
 
+  bookToBeUpdated:book = new book();
+
   constructor() { }
 
   getBooks() : book[] {
@@ -26,5 +28,13 @@ export class ServiceNameService {
           this.books.splice(i,1);
       }
     }
+  }
+
+  setUpdateBook(setBook: book): void {
+    this.bookToBeUpdated = setBook;
+  }
+
+  getUpdateBook() : book {
+    return this.bookToBeUpdated;
   }
 }

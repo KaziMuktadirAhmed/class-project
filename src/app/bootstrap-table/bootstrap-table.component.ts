@@ -23,6 +23,7 @@ export class BootstrapTableComponent implements OnInit {
 
   Update (givenBook : book) : void {
     const index = this.books.indexOf(givenBook);
+    this.bookSevice.setUpdateBook(givenBook);
   }
 
 }
