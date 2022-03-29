@@ -21,4 +21,8 @@ export class BootstrapTableComponent implements OnInit {
     this.bookSevice.deleteBook(index);
   }
 
+  Update (book : book) : void {
+    const index = this.books.indexOf(book);
+  }
+
 }

@@ -16,6 +16,7 @@
         <td *ngIf="book.availability">Available</td>
         <td *ngIf="!book.availability">Borrowed</td>
         <td><button type="button" class="btn btn-primary" (click)="Delete(book)">Delete</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="Update(book)">Update info</button></td>
       </tr>
     </tbody>
   </table>

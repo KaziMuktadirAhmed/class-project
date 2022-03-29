@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BootstrapTableComponent } from './bootstrap-table/bootstrap-table.component';
 import { AngularJsWelcomePageComponent } from './angular-js-welcome-page/angular-js-welcome-page.component';
+import { UpdateBookComponent } from './update-book/update-book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BootstrapTableComponent,
-    AngularJsWelcomePageComponent
+    AngularJsWelcomePageComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,
