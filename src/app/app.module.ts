@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BootstrapTableComponent } from './bootstrap-table/bootstrap-table.component';
 import { AngularJsWelcomePageComponent } from './angular-js-welcome-page/angular-js-welcome-page.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BootstrapTableComponent,
     AngularJsWelcomePageComponent,
-    UpdateBookComponent
+    UpdateBookComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
