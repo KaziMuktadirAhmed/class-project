@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { book } from '../book';
 import { ServiceNameService } from '../service-name.service';
 
@@ -9,7 +10,7 @@ import { ServiceNameService } from '../service-name.service';
 })
 export class BootstrapTableComponent implements OnInit {
 
-  constructor(private bookSevice : ServiceNameService) { }
+  constructor(private bookSevice : ServiceNameService, private router: Router) { }
 
   books = this.bookSevice.getBooks();
   ngOnInit(): void {
@@ -24,6 +25,7 @@ export class BootstrapTableComponent implements OnInit {
   Update (givenBook : book) : void {
     const index = this.books.indexOf(givenBook);
     this.bookSevice.setUpdateBook(givenBook);
+    this.router.navigate(['update-book'])
   }
 
 }
