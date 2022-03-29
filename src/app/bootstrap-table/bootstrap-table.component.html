@@ -9,22 +9,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let book of books">
+        <td>{{book.id}}</td>
+        <td>{{book.name}}</td>
+        <td>{{book.year}}</td>
+        <td *ngIf="book.availability">Available</td>
+        <td *ngIf="!book.availability">Borrowed</td>
+        <td><button type="button" class="btn btn-primary" (click)="Delete(book)">Delete</button></td>
       </tr>
     </tbody>
   </table>

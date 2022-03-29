@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { book } from '../book';
+import { ServiceNameService } from '../service-name.service';
 
 @Component({
   selector: 'app-bootstrap-table',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BootstrapTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bookSevice : ServiceNameService) { }
 
+  books = this.bookSevice.getBooks();
   ngOnInit(): void {
+    console.log("okay");
+  }
+
+  Delete (book : book) : void {
+    const index = this.books.indexOf(book);
+    this.bookSevice.deleteBook(index);
   }
 
 }
