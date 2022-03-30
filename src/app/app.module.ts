@@ -7,6 +7,7 @@ import { BootstrapTableComponent } from './bootstrap-table/bootstrap-table.compo
 import { AngularJsWelcomePageComponent } from './angular-js-welcome-page/angular-js-welcome-page.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     NavBarComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
