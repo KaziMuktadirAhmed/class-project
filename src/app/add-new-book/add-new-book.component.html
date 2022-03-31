@@ -13,7 +13,11 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label"><h1 style="text-align: justify;">Available</h1></label>
-    <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="newBook.availability" [ngModelOptions]="{standalone:true}">
+    <input type="text" class="form-control" id="exampleInputPassword1">
   </div>
-  <button type="submit" class="btn btn-primary" (click)="AddBook()">Save</button>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="AddBook()">Add Book</button>
 </form>

@@ -10,7 +10,7 @@ import { book } from '../book';
 })
 export class AddNewBookComponent implements OnInit {
 
-  constructor(private bookService:ServerModule, private router:Router) { }
+  constructor() { }
 
   newBook : book = new book()
 
