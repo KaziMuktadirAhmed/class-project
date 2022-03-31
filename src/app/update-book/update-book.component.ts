@@ -15,4 +15,8 @@ export class UpdateBookComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveClick() : void {
+    console.log(this.givenBook);
+  }
+
 }
