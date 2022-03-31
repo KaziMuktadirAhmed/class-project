@@ -1,0 +1,19 @@
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"><h1 style="text-align: justify;">ID</h1></label>
+    <input type="text" class="form-control" id="book-id" [(ngModel)]="newBook.id" [ngModelOptions]="{standalone:true}">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"><h1 style="text-align: justify;">Book name</h1></label>
+    <input type="text" class="form-control" id="book-name" [(ngModel)]="newBook.name" [ngModelOptions]="{standalone:true}">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label"><h1 style="text-align: justify;">Publishing year</h1></label>
+    <input type="text" class="form-control" id="publish-year" [(ngModel)]="newBook.year" [ngModelOptions]="{standalone:true}">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label"><h1 style="text-align: justify;">Available</h1></label>
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="newBook.availability" [ngModelOptions]="{standalone:true}">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="AddBook()">Save</button>
+</form>
