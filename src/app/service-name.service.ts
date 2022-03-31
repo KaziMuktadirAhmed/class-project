@@ -1,3 +1,4 @@
+import { NONE_TYPE } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { book } from './book';
 
@@ -15,6 +16,7 @@ export class ServiceNameService {
   ]
 
   bookToBeUpdated:book = new book();
+  updateBookIndex:number = -1;
 
   constructor() { }
 
@@ -30,8 +32,9 @@ export class ServiceNameService {
     }
   }
 
-  setUpdateBook(setBook: book): void {
+  setUpdateBook(setBook: book, index:number): void {
     this.bookToBeUpdated = setBook;
+    this.updateBookIndex = index
   }
 
   getUpdateBook() : book {
