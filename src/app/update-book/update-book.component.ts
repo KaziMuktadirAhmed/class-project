@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceNameService } from '../service-name.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-book',
@@ -8,7 +9,7 @@ import { ServiceNameService } from '../service-name.service';
 })
 export class UpdateBookComponent implements OnInit {
 
-  constructor(private bookService: ServiceNameService) { }
+  constructor(private bookService: ServiceNameService, private router:Router) { }
 
   givenBook = this.bookService.getUpdateBook()
 
@@ -16,8 +17,9 @@ export class UpdateBookComponent implements OnInit {
   }
 
   saveClick() : void {
-
+    this.bookService.updateBook(this.givenBook);
     console.log(this.givenBook);
+    this.router.navigate(['books']);
   }
 
 }

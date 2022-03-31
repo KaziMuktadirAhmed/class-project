@@ -32,6 +32,10 @@ export class ServiceNameService {
     }
   }
 
+  updateBook(book:book) : void {
+    this.books.splice(this.updateBookIndex, 1, book);
+  }
+
   setUpdateBook(setBook: book, index:number): void {
     this.bookToBeUpdated = setBook;
     this.updateBookIndex = index
