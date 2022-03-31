@@ -10,7 +10,7 @@ export class UpdateBookComponent implements OnInit {
 
   constructor(private bookService: ServiceNameService) { }
 
-  givenBooks = this.bookService.getUpdateBook()
+  givenBook = this.bookService.getUpdateBook()
 
   ngOnInit(): void {
   }
