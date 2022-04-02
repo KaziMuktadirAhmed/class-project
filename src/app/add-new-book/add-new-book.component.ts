@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServerModule } from '@angular/platform-server';
+// import { ServerModule } from '@angular/platform-server';
 import { Router } from '@angular/router';
 import { book } from '../book';
 import { ServiceNameService } from '../service-name.service';
