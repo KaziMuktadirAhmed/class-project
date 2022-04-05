@@ -21,7 +21,7 @@ export class ServiceNameService {
   constructor() { }
 
   getBooks() : book[] {
-    return this.books
+    return JSON.parse(JSON.stringify(this.books));
   }
 
   deleteBook (index: number): void {
