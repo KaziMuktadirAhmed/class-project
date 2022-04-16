@@ -24,12 +24,9 @@ export class ServiceNameService {
     return JSON.parse(JSON.stringify(this.books));
   }
 
-  deleteBook (index: number): void {
-    for(let i = 0; i < this.books.length; ++i){
-      if (i == index) {
-          this.books.splice(i,1);
-      }
-    }
+  deleteBook (givenBook: book): book[] {
+    this.books = this.books.filter((book) => givenBook.id != book.id);
+    return this.books;
   }
 
   updateBook(book:book) : void {

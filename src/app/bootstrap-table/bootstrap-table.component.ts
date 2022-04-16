@@ -18,8 +18,8 @@ export class BootstrapTableComponent implements OnInit {
   }
 
   Delete (book : book) : void {
-    const index = this.books.indexOf(book);
-    this.bookSevice.deleteBook(index);
+    console.log(book);
+    this.books = this.bookSevice.deleteBook(book);
   }
 
   Update (givenBook : book, index:number) : void {
