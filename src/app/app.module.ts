@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AddNewBookComponent } from './add-new-book/add-new-book.component';
+import { SampleComponent } from './sample/sample.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddNewBookComponent } from './add-new-book/add-new-book.component';
     AngularJsWelcomePageComponent,
     UpdateBookComponent,
     NavBarComponent,
-    AddNewBookComponent
+    AddNewBookComponent,
+    SampleComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
